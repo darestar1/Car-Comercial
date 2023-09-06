@@ -32,7 +32,7 @@ LOGIN_REDIRECT_URL ='dashboard'
 # Application definition
 
 INSTALLED_APPS = [
-    
+    'contacts.apps.ContactsConfig',
     'accounts.apps.AccountsConfig',
     'cars.apps.CarsConfig',
     'pages.apps.PagesConfig',
@@ -155,3 +155,5 @@ MESSAGE_TAGS = {
     
 }
 SITE_ID = 1
+
+SOCIALACCOUNT_LOGIN_ON_GET=True
