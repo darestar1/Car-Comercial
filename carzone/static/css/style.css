@@ -9774,5 +9774,8 @@ a.nav-link.active{
 
 
 
+li.active {
+    text-transform: capitalize;
+}
 
 
