@@ -25,7 +25,7 @@ SECRET_KEY = '2+woqexm=&+7_$(i&80f^s#=#4o8&2yt16i)r_3kq56s8@ji@-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://still-peak-92704-84ec6d144c4f.herokuapp.com","carzoneapp.co","www.carzoneapp.co"]
 
 LOGIN_REDIRECT_URL ='dashboard'
 
