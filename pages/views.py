@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Team
 from cars.models import Car
 from django.core.mail import send_mail
@@ -45,6 +45,7 @@ def contact(request):
         admin_info = User.objects.get(is_superuser=True)
         admin_email = admin_info.email
         send_mail(
+                email_subject,
                 subject,
                 message_body,
                 'logcoming@gmail.com',
@@ -52,5 +53,6 @@ def contact(request):
                 fail_silently=False,
             )
         messages.success(request,"Thank you for contacting. We will be get back you as soon as possible.")
+        return redirect("contact")
         
     return render(request,'pages/contact.html')
