@@ -21,7 +21,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '2+woqexm=&+7_$(i&80f^s#=#4o8&2yt16i)r_3kq56s8@ji@-'
-
+    
+    
+    
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 IS_HEROKU_APP = "DYNO" in os.environ and not "CI" in os.environ
@@ -118,6 +120,8 @@ WSGI_APPLICATION = 'carzone.wsgi.application'
 
 
 DATABASES = {'default': dj_database_url.config(default='postgres://postgres:fener&1907@localhost/car_db')}
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
