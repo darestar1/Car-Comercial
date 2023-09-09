@@ -115,7 +115,7 @@ WSGI_APPLICATION = 'carzone.wsgi.application'
 #     }
 # }
 
-DATABASES = {'default': dj_database_url.config(default='postgres://postgres:fener&1907@localhost/car_db', conn_max_age=600, ssl='required')}
+DATABASES = {'default': dj_database_url.config(default='postgres://postgres:fener&1907@localhost/car_db')}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
