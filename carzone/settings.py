@@ -63,7 +63,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-
+    'whitenoise.runserver_nostatic',
     # Providers
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
@@ -114,6 +114,8 @@ WSGI_APPLICATION = 'carzone.wsgi.application'
 #         'HOST': 'localhost',
 #     }
 # }
+
+
 
 DATABASES = {'default': dj_database_url.config(default='postgres://postgres:fener&1907@localhost/car_db')}
 
