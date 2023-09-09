@@ -24,8 +24,22 @@ SECRET_KEY = '2+woqexm=&+7_$(i&80f^s#=#4o8&2yt16i)r_3kq56s8@ji@-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+IS_HEROKU_APP = "DYNO" in os.environ and not "CI" in os.environ
 
-ALLOWED_HOSTS = ["still-peak-92704-84ec6d144c4f.herokuapp.com","carzoneapp.co","www.carzoneapp.co"]
+# SECURITY WARNING: don't run with debug turned on in production!
+if not IS_HEROKU_APP:
+    DEBUG = True
+
+# On Heroku, it's safe to use a wildcard for `ALLOWED_HOSTS``, since the Heroku router performs
+# validation of the Host header in the incoming HTTP request. On other platforms you may need
+# to list the expected hostnames explicitly to prevent HTTP Host header attacks. See:
+# https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-ALLOWED_HOSTS
+if IS_HEROKU_APP:
+    ALLOWED_HOSTS = ["still-peak-92704-84ec6d144c4f.herokuapp.com","carzoneapp.co","www.carzoneapp.co"]
+else:
+    ALLOWED_HOSTS = []
+
+
 
 LOGIN_REDIRECT_URL ='dashboard'
 
