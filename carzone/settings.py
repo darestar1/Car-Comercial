@@ -107,18 +107,18 @@ WSGI_APPLICATION = 'carzone.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-     'default': {         'ENGINE': 'django.db.backends.postgresql',
-         'NAME': 'car_db',
-         'USER': 'postgres',
-         'PASSWORD': 'fener&1907',
-         'HOST': 'localhost',
-     }
- }
+# DATABASES = {
+#      'default': {         'ENGINE': 'django.db.backends.postgresql',
+#          'NAME': 'car_db',
+#          'USER': 'postgres',
+#          'PASSWORD': 'fener&1907',
+#          'HOST': 'localhost',
+#      }
+#  }
 
 
 
-# DATABASES = {'default': dj_database_url.config(default='postgres://postgres:fener&1907@localhost/car_db')}
+DATABASES = {'default': dj_database_url.config(default='postgres://postgres:fener&1907@localhost/car_db')}
 # DATABASES = {
 #      'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
