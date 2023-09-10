@@ -97,7 +97,7 @@ class Car(models.Model):
     city = models.CharField(max_length=100)
     color = models.CharField(max_length=100)
     model = models.CharField(max_length=100)
-    year = models.IntegerField(("year"),choices=year_choice,default=list)
+    year = models.IntegerField(("year"),choices=year_choice)
     condition = models.CharField(max_length=100)
     price = models.IntegerField()
     description = RichTextField(default="")                #pip install django-ckeditor for this and add this ckeditor settings apps
@@ -112,7 +112,7 @@ class Car(models.Model):
     transmission = models.CharField(max_length=100)
     interior = models.CharField(max_length=100)
     miles = models.IntegerField()
-    doors = models.CharField(choices=door_choices,max_length=1)
+    doors = models.CharField(choices = door_choices, max_length = 1)
     passengers = models.IntegerField()
     vin_no = models.CharField(max_length=100)
     millage = models.IntegerField()
